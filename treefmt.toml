@@ -1,0 +1,19 @@
+[formatter.nix]
+command = "nixfmt"
+includes = ["*.nix"]
+
+[formatter.prettier]
+command = "prettier --write"
+includes = ["*.json", "*.md", "*.yaml", "*.yml", "*.html", "*.css", "*.js", "*.ts"]
+
+[formatter.toml]
+command = "taplo format --stdin --stdout"
+includes = ["*.toml"]
+
+[formatter.nickel]
+command = "nickel format --stdin --stdout"
+includes = ["*.ncl", "*.nickel"]
+
+[formatter.rust]
+command = "rustfmt"
+includes = ["*.rs"]
